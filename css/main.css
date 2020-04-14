@@ -102,13 +102,14 @@ a {
     display: grid;
     place-items: center; }
   .wind__arrow {
-    --direction: 0deg;
+    --direction: 180deg;
     --size: 1rem;
     height: calc(var(--size) * 3);
     width: var(--size);
     background: var(--clr-accent-dark);
     clip-path: polygon(50% 0, 0% 100%, 100% 100%);
-    transform: translateY(-50%); }
+    transform: translateY(-50%) rotate(var(--direction));
+    transform-origin: bottom center; }
 
 .info {
   grid-column: 1 / 3; }
