@@ -1,45 +1,68 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
-    --fw-light: 300;
-    --fw-normal: 400;
-    --fw-semi: 500;
-    --fw-bold: 700;
-    --fs-h1: 1.25rem;
-    --fs-h2: 1.75rem;
-    --fs-body: 1rem;
-    --fs-xl: 4rem;
-    --clr-light: #fff;
-    --clr-gray: #989898;
-    --clr-dark: #444;
-    --clr-accent: #D06D6D;
-    --clr-accent-dark: #613131;
-  }
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-semi: 500;
+  --fw-bold: 700;
+  --fs-h1: 1.25rem;
+  --fs-h2: 1.75rem;
+  --fs-body: 1rem;
+  --fs-xl: 4rem;
+  --clr-light: #fff;
+  --clr-gray: #989898;
+  --clr-dark: #444;
+  --clr-accent: #d06d6d;
+  --clr-accent-dark: #613131;
+}
 
-  .sr-only:not(:focus):not(:active) {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-  }
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 
-  body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-    background-image: url(../img/mars.jpg);
-    background-size: cover;
-    color: var(--clr-light);
-    min-height: 100vh;
-} 
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  background-image: url(../img/mars.jpg);
+  background-size: cover;
+  color: var(--clr-light);
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+.main-title {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-light);
+  text-transform: uppercase;
+  color: var(--clr-accent);
+  letter-spacing: 2px;
+}
+
+.section-title {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  margin: 0;
+}
 
 .mars-current-weather {
-  background: rgba(0, 0, 0, .7);
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2em;
+  max-width: 1000px;
+  margin: 4em 0 0 4em;
 }

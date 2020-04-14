@@ -15,7 +15,7 @@
   --clr-light: #fff;
   --clr-gray: #989898;
   --clr-dark: #444;
-  --clr-accent: #D06D6D;
+  --clr-accent: #d06d6d;
   --clr-accent-dark: #613131; }
 
 .sr-only:not(:focus):not(:active) {
@@ -29,12 +29,32 @@
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.6;
   background-image: url(../img/mars.jpg);
   background-size: cover;
   color: var(--clr-light);
   min-height: 100vh; }
 
+h1,
+h2,
+h3 {
+  line-height: 1; }
+
+.main-title {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-light);
+  text-transform: uppercase;
+  color: var(--clr-accent);
+  letter-spacing: 2px; }
+
+.section-title {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  margin: 0; }
+
 .mars-current-weather {
-  background: rgba(0, 0, 0, 0.7); }
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2em;
+  max-width: 1000px;
+  margin: 4em 0 0 4em; }
