@@ -111,6 +111,26 @@ a {
 
 .wind {
   grid-column: 3 / 4;
+
+  &__direction {
+    --size: 6rem;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .5);
+    display: grid;
+    place-items: center;
+  }
+
+  &__arrow {
+    --direction: 0deg;
+    --size: 1rem;
+    height: calc(var(--size) * 3);
+    width: var(--size);
+    background: var(--clr-accent-dark);
+    clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+    transform: translateY(-50%);
+  }
 }
 
 .info {
