@@ -161,3 +161,13 @@ a {
       width: 1rem; }
   .unit :checked ~ .unit__toggle::after {
     margin-left: 3px; }
+
+.previous-weather {
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+
+.previous-days {
+  display: flex; }
