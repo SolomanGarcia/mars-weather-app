@@ -5,13 +5,23 @@ const previousWeatherToggle = document.querySelector('.show-previous-weather');
 
 const previousWeather = document.querySelector('.previous-weather');
 
+const currentSolElement = document.querySelector('[data-current-sol]');
+
 previousWeatherToggle.addEventListener('click', () => {
   previousWeather.classList.toggle('show-weather')
 });
 
+let selectedSolIndex;
+
 getWeather().then(sols => {
-  console.log(sols);
+  selectedSolIndex = sols.length - 1;
+  displaySelectedSol(sols);
 })
+
+function displaySelectedSol(sols) {
+  const selectedSol = sols[selectedSolIndex]
+  currentSolElement.innerText = selectedSol.sol
+}
 
 function getWeather() {
   return fetch(API_URL)
