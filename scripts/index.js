@@ -27,13 +27,20 @@ getWeather().then(sols => {
 function displaySelectedSol(sols) {
   const selectedSol = sols[selectedSolIndex]
   currentSolElement.innerText = selectedSol.sol;
-  currentDateElement.innerText = selectedSol.date;
+  currentDateElement.innerText = displayDate(selectedSol.date);
   currentTempHighElement.innerText = selectedSol.maxTemp;
   currentTempLowElement.innerText = selectedSol.minTemp;
   windSpeedElement.innerText = selectedSol.windSpeed;
   windDirectionArrow.style.setProperty('--direction', `${selectedSol.windDirectionDegrees}deg`);
   windDirectionText.innerText = selectedSol.windDirectionCardinal;
 }
+
+function displayDate(date) {
+  return date.toLocaleDateString(
+    undefined,
+    { day: 'numeric', month: 'long' }
+  )
+};
 
 function getWeather() {
   return fetch(API_URL)
