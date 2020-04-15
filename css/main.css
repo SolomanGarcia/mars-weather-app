@@ -117,10 +117,28 @@ a {
     background: var(--clr-accent-dark);
     clip-path: polygon(50% 0, 0% 100%, 100% 100%);
     transform: translateY(-50%) rotate(var(--direction));
-    transform-origin: bottom center; }
+    transform-origin: bottom center;
+    transition: transform 500ms ease; }
 
 .info {
   grid-column: 1 / 3; }
 
-.unit-toggle {
-  grid-column: 3 / 4; }
+.unit {
+  grid-column: 3 / 4;
+  place-self: end;
+  color: var(--clr-gray); }
+  .unit__toggle {
+    cursor: pointer;
+    width: 4em;
+    border: 2px solid var(--clr-gray);
+    background: transparent;
+    padding: 0;
+    border-radius: 100vmax; }
+    .unit__toggle::after {
+      content: '';
+      display: block;
+      background: var(--clr-gray);
+      border-radius: 50%;
+      height: 1rem;
+      margin: 3px;
+      width: 50%; }
