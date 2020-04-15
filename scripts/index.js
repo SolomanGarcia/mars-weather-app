@@ -30,7 +30,7 @@ function displaySelectedSol(sols) {
   currentDateElement.innerText = displayDate(selectedSol.date);
   currentTempHighElement.innerText = displayTemperature(selectedSol.maxTemp);
   currentTempLowElement.innerText = displayTemperature(selectedSol.minTemp);
-  windSpeedElement.innerText = selectedSol.windSpeed;
+  windSpeedElement.innerText = displaySpeed(selectedSol.windSpeed);
   windDirectionArrow.style.setProperty('--direction', `${selectedSol.windDirectionDegrees}deg`);
   windDirectionText.innerText = selectedSol.windDirectionCardinal;
 }
@@ -44,6 +44,10 @@ function displayDate(date) {
 
 function displayTemperature(temperature) {
   return Math.round(temperature);
+};
+
+function displaySpeed(speed) {
+  return Math.round(speed);
 };
 
 function getWeather() {
