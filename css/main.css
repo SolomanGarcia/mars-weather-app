@@ -182,10 +182,22 @@ a {
   line-height: 1;
   clip-path: polygon(50% 0, 0 100%, 100% 100%);
   cursor: pointer;
-  color: var(--clr-gray); }
+  color: var(--clr-gray);
+  border: 0;
+  font-family: inherit; }
+  .show-previous-weather:hover, .show-previous-weather:focus {
+    color: var(--clr-dark); }
+  .show-previous-weather span {
+    display: block;
+    transform: rotate(0);
+    transition: transform 300ms ease; }
 
 .previous-days {
-  display: flex; }
+  display: flex;
+  justify-content: space-between; }
 
-.show-weather {
+.show-weather.previous-weather {
   transform: translateY(0); }
+  .show-weather.previous-weather .show-previous-weather span {
+    display: block;
+    transform: rotate(180deg) translateY(-6px); }
