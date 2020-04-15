@@ -6,6 +6,12 @@ const previousWeatherToggle = document.querySelector('.show-previous-weather');
 const previousWeather = document.querySelector('.previous-weather');
 
 const currentSolElement = document.querySelector('[data-current-sol]');
+const currentDateElement = document.querySelector('[data-current-date]');
+const currentTempHighElement = document.querySelector('[data-current-temp-high]');
+const currentTempLowElement = document.querySelector('[data-current-temp-low]');
+const windSpeedElement = document.querySelector('[data-wind-speed]');
+const windDirectionText = document.querySelector('[data-wind-direction-text]');
+const windDirectionArrow = document.querySelector('[data-wind-direction-arrow]');
 
 previousWeatherToggle.addEventListener('click', () => {
   previousWeather.classList.toggle('show-weather')
