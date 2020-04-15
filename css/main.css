@@ -126,14 +126,16 @@ a {
 .unit {
   grid-column: 3 / 4;
   place-self: end;
-  color: var(--clr-gray); }
+  color: var(--clr-gray);
+  display: flex; }
   .unit__toggle {
     cursor: pointer;
     width: 4em;
     border: 2px solid var(--clr-gray);
     background: transparent;
     padding: 0;
-    border-radius: 100vmax; }
+    border-radius: 100vmax;
+    margin: 0 .5em; }
     .unit__toggle::after {
       content: '';
       display: block;
@@ -141,4 +143,9 @@ a {
       border-radius: 50%;
       height: 1rem;
       margin: 3px;
-      width: 50%; }
+      margin-left: auto;
+      width: 1rem; }
+
+:checked ~ .unit__toggle::after {
+  margin-left: 3px;
+  margin-right: auto; }
