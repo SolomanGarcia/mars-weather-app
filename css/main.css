@@ -147,7 +147,8 @@ a {
     background: transparent;
     padding: 0;
     border-radius: 100vmax;
-    margin: 0 1em; }
+    margin: 0 1em;
+    outline: none; }
     .unit__toggle::after {
       content: "";
       display: block;
@@ -162,7 +163,6 @@ a {
   margin-left: 3px; }
 
 .previous-weather {
-  display: none;
   background: var(--clr-light);
   color: var(--clr-dark);
   position: absolute;
