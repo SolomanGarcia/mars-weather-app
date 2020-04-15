@@ -26,7 +26,13 @@ getWeather().then(sols => {
 
 function displaySelectedSol(sols) {
   const selectedSol = sols[selectedSolIndex]
-  currentSolElement.innerText = selectedSol.sol
+  currentSolElement.innerText = selectedSol.sol;
+  currentDateElement.innerText = selectedSol.date;
+  currentTempHighElement.innerText = selectedSol.maxTemp;
+  currentTempLowElement.innerText = selectedSol.minTemp;
+  windSpeedElement.innerText = selectedSol.windSpeed;
+  windDirectionArrow.style.setProperty('--direction', `${selectedSol.windDirectionDegrees}deg`);
+  windDirectionText.innerText = selectedSol.windDirectionCardinal;
 }
 
 function getWeather() {
